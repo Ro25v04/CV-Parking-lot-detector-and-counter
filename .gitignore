@@ -1,0 +1,54 @@
+# ============================
+# Virtual Environments
+# ============================
+venv/
+.venv/
+
+# ============================
+# Python cache
+# ============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ============================
+# Jupyter / notebooks
+# ============================
+.ipynb_checkpoints/
+
+# ============================
+# Environment / secrets
+# ============================
+.env
+
+# ============================
+# Data, videos, outputs
+# (DO NOT commit large files)
+# ============================
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+data/
+dataset/
+datasets/
+outputs/
+runs/
+results/
+
+# ============================
+# ML model files
+# ============================
+*.h5
+*.pt
+*.pth
+*.onnx
+*.joblib
+
+# ============================
+# OS junk
+# ============================
+.DS_Store
+Thumbs.db
