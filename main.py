@@ -1,9 +1,15 @@
 import cv2
 
+from util import get_parking_spots_bboxes
 
+mask = './mask_crop.png'
 video_path = './Data/parking_crop_loop.mp4'
 
+mask = cv2.imread(mask, 0)
+
 cap = cv2.VideoCapture(video_path)
+
+connected_components = cv2.connectedComponents(mask, 4, cv2.CV_32S)
 
 ret = True
 while ret:
