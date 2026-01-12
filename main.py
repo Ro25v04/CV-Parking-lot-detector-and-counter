@@ -9,7 +9,11 @@ mask = cv2.imread(mask, 0)
 
 cap = cv2.VideoCapture(video_path)
 
-connected_components = cv2.connectedComponents(mask, 4, cv2.CV_32S)
+connected_components = cv2.connectedComponentsWithStats(mask, 4, cv2.CV_32S)
+
+spots = get_parking_spots_bboxes(connected_components)
+
+print(spots[0])
 
 ret = True
 while ret:
